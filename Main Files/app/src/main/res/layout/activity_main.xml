@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:text="@string/sensor_graph_title"
+        android:padding="3dp"
+        />
+
+
+    <com.example.mis.sensor.CustomGraphView
+        android:id="@+id/sensor_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="@string/fft_graph_title"
+            android:padding="3dp"
+            />
+
+        <TextView
+            android:id="@+id/fft_dom_freq_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <com.example.mis.sensor.CustomGraphView
+        android:id="@+id/fft_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        />
+
+    <TextView
+        android:id="@+id/sample_rate_label"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:text="@string/sample_rate_label"
+        android:padding="3dp"
+        />
+
+    <SeekBar
+        android:id="@+id/sample_rate_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+        <!--android:min="10"-->
+        <!--android:max="1000"-->
+        <!--/>-->
+
+    <TextView
+        android:id="@+id/window_size_label"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:text="@string/window_size_label"
+        android:padding="3dp"
+        />
+
+    <SeekBar
+        android:id="@+id/window_size_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+        <!--android:min="4"-->
+        <!--android:max="10"-->
+        <!--/>-->
+
+
+    <TextView
+        android:id="@+id/mode_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:padding="3dp"
+        />
+
+    <TextView
+        android:id="@+id/speed_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:padding="3dp"
+        />
+
+    <TextView
+        android:id="@+id/fft_energy_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:padding="3dp"
+        />
+
+
+</LinearLayout>
